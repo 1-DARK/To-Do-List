@@ -1,6 +1,3 @@
-Here's a complete `README.md` file for your **To-Do List Web Application** project:
-
----
 
 # 📝 To-Do List Web Application
 
