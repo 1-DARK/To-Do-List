@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <script defer src="Project1.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #121212;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .input-section {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    #todo {
+      flex: 1 1 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #555;
+      background-color: #2c2c2c;
+      color: white;
+    }
+
+    #add_task {
+      background-color: #8a2be2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      flex: 1 1 100%;
+    }
+
+    #add_task:hover {
+      background-color: #a34de0;
+    }
+
+    ul#todo-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      background-color: #2c2c2c;
+      padding: 10px 15px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s ease;
+      font-size: 1rem;
+    }
+
+    li.completed {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    .delete-btn {
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .delete-btn:hover {
+      background-color: darkred;
+
+    }
+
+    @media (min-width: 500px) {
+      .input-section {
+        flex-wrap: nowrap;
+      }
+
+      #todo {
+        flex: 2;
+      }
+
+      #add_task {
+        flex: none;
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>To-Do List</h1>
+    </div>
+    <div class="input-section">
+      <input id="todo" type="text" placeholder="Add a new task..." />
+      <button id="add_task">Add</button>
+    </div>
+    
+    <ul id="todo-list"></ul>
+  </div>
+</body>
+</html>
